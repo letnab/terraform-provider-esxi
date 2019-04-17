@@ -43,7 +43,7 @@ resource "esxi_guest" "Default" {
   guest_name         = "${var.vm_hostname}"
   disk_store         = "${var.disk_store}"
 
-  clone_from_vm      = "Templates/centos7"
+  ovf_source         = "/root/sample-packer-centos-on-esxi/output-packer-centos-7-x86_64/packer-centos-7-x86_64.ova"
 
   network_interfaces = [
     {
